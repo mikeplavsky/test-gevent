@@ -17,6 +17,6 @@ def index():
 wsgi = WSGIServer(
         ('0.0.0.0',5000), 
         app, 
-        spawn=Pool(1000))
+        spawn=Pool(10_000))
 
 wsgi.serve_forever()
